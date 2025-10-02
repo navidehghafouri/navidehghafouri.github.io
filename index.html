@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My GitHub Pages — Your Name</title>
+  <meta name="description" content="Personal site / portfolio hosted on GitHub Pages">
+
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071029 0%,#071b2a 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:980px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px;padding:28px;background:var(--glass);border-radius:16px}
+    .hero h1{margin:0;font-size:28px}
+    .hero p{margin:6px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 6px}
+    .footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:var(--accent);color:#022; font-weight:600;text-decoration:none}
+    @media(min-width:760px){.hero{grid-template-columns:1fr 320px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <div style="font-weight:700">Your Name</div>
+          <div style="font-size:13px;color:var(--muted)">Engineer · Open-source · Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Hi — I build things for the web, cloud, and networks.</h1>
+          <p>Lightweight personal site template for GitHub Pages. Use this as a portfolio, project hub, or docs front page.</p>
+          <p style="margin-top:12px;"><a class="btn" href="#projects">View projects</a></p>
+        </div>
+        <aside class="card">
+          <h3>Quick links</h3>
+          <ul style="padding-left:18px;margin:8px 0;color:var(--muted)">
+            <li><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub profile</a></li>
+            <li><a href="#contact">Email</a></li>
+            <li><a href="#">Resume (PDF)</a></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="projects" style="margin-top:18px">
+        <h2 style="margin:0 0 8px">Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Project Alpha</h3>
+            <p style="margin:0;color:var(--muted)">Short description. Technologies: Python · ns-3 · Kubernetes.</p>
+            <p style="margin-top:10px"><a href="#" class="btn">Open repo</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Project Beta</h3>
+            <p style="margin:0;color:var(--muted)">Short description. Use this card for demos or papers.</p>
+          </article>
+
+          <article class="card">
+            <h3>Project Gamma</h3>
+            <p style="margin:0;color:var(--muted)">Short description.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:22px">
+        <h2 style="margin:0 0 8px">About</h2>
+        <div class="card">
+          <p style="margin:0;color:var(--muted)">Write a short bio here. Talk about what you build, your interests, or the team's mission. Link to publications or your resume.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h2 style="margin:0 0 8px">Contact</h2>
+        <div class="card">
+          <p style="margin:0;color:var(--muted)">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <p style="margin:8px 0 0;color:var(--muted)">GitHub: <a href="https://github.com/yourusername">@yourusername</a></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div>Hosted with ♥ on GitHub Pages — replace this text with your copyright or links.</div>
+    </footer>
+  </div>
+
+  <script>
+    // small helper: replace initials in logo if you set your name
+    (function(){
+      const logo = document.querySelector('.logo');
+      if(!logo) return;
+      const initials = (document.querySelector('.brand div')?.textContent || 'YN').trim().split(' ').map(s=>s[0]).slice(0,2).join('');
+      logo.textContent = initials.toUpperCase();
+    })();
+  </script>
+</body>
+</html>
