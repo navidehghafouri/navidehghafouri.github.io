@@ -114,15 +114,13 @@
         }
 
         /* Placeholder for photo */
-        .photo-placeholder {
+        .profile-photo {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-            color: #00ffff;
+            object-fit: cover;
+            border-radius: 50%; /* if you want circular photo */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 
+                        0 0 40px rgba(255, 0, 255, 0.3);
         }
 
         h1 {
@@ -529,7 +527,7 @@
                 <div class="photo-container">
                     <!-- Replace the src attribute below with your photo URL -->
                     <img src="your-photo.jpg" alt="Navideh Ghafouri" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="photo-placeholder" style="display: none;">👤</div>
+                    <img src="ax.jpg" alt="Navide Ghafouri" class="profile-photo">
                 </div>
                 <h1>Navideh Ghafouri</h1>
                 <p class="subtitle">AI-Enabled 6G Networks Researcher | Reinforcement Learning Specialist</p>
