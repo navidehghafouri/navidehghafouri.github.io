@@ -21,7 +21,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated background */
         body::before {
             content: '';
             position: fixed;
@@ -50,7 +49,6 @@
             z-index: 1;
         }
 
-        /* Header with photo */
         header {
             background: rgba(15, 15, 25, 0.9);
             backdrop-filter: blur(10px);
@@ -92,14 +90,8 @@
             border-radius: 50%;
             padding: 4px;
             background: linear-gradient(135deg, #00ffff, #ff00ff);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
-                        0 0 60px rgba(255, 0, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(255, 0, 255, 0.3);
             overflow: hidden;
-        }
-
-        @keyframes photoGlow {
-            0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(255, 0, 255, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.7), 0 0 80px rgba(255, 0, 255, 0.5); }
         }
 
         .photo-container img {
@@ -186,7 +178,6 @@
             z-index: 1;
         }
 
-        /* Highlighted White Paper Section */
         .featured-work {
             background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
             backdrop-filter: blur(10px);
@@ -474,36 +465,13 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            .section {
-                padding: 25px;
-            }
-
-            .project-card {
-                padding: 25px;
-            }
-
-            .project-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .links {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .links a {
-                text-align: center;
-            }
-
-            .photo-container {
-                width: 150px;
-                height: 150px;
-            }
+            h1 { font-size: 2em; }
+            .section { padding: 25px; }
+            .project-card { padding: 25px; }
+            .project-header { flex-direction: column; align-items: flex-start; }
+            .links { flex-direction: column; align-items: stretch; }
+            .links a { text-align: center; }
+            .photo-container { width: 150px; height: 150px; }
         }
     </style>
 </head>
@@ -525,7 +493,7 @@
             </div>
         </header>
 
-        <!-- Featured White Paper Section -->
+        <!-- Featured Contributions Section -->
         <div class="featured-work">
             <span class="featured-label">🏆 Featured Contributions</span>
             
@@ -549,10 +517,14 @@
 
         <section class="section">
             <h2>Education</h2>
-            <div class="education-item">
-                <div class="degree">PhD in AI-Enabled 6G Networks (Expected Defense: 2025)</div>
+            <!-- PhD - UPDATED: completed with Cum Laude, thesis linked -->
+            <div class="education-item" style="border-left-color: #ff00ff; background: linear-gradient(135deg, rgba(255, 0, 255, 0.05), rgba(0, 255, 157, 0.05));">
+                <div style="display: flex; align-items: flex-start; gap: 15px; flex-wrap: wrap; margin-bottom: 8px;">
+                    <div class="degree" style="flex: 1;">PhD in AI-Enabled 6G Networks</div>
+                    <span style="background: linear-gradient(135deg, #ff00ff, #00ffff); color: #000; padding: 6px 18px; border-radius: 15px; font-size: 0.85em; font-weight: bold; white-space: nowrap; box-shadow: 0 0 15px rgba(255, 0, 255, 0.5); animation: badgePulse 2s ease-in-out infinite;">🎓 CUM LAUDE</span>
+                </div>
                 <div class="institution"><a href="https://www.upc.edu/" target="_blank" style="color: #667eea; text-decoration: none;">Universitat Politècnica de Catalunya (UPC)</a></div>
-                <p style="margin-top: 10px;"><strong>Thesis:</strong> Reinforcement Learning-Based Energy Efficient Network Orchestration, Slicing, and Resource Management for 6G Intelligent Networks</p>
+                <p style="margin-top: 10px;"><strong>Thesis:</strong> <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=l56WxyEAAAAJ&citation_for_view=l56WxyEAAAAJ:eQOLeE2rZwMC" target="_blank" style="color: #00ffff; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ff00ff'" onmouseout="this.style.color='#00ffff'">Reinforcement Learning-Based Energy Efficient Network Orchestration, Slicing, and Resource Management for 6G Intelligent Networks</a></p>
             </div>
             <div class="education-item">
                 <div class="degree">MSc in Computer Engineering</div>
@@ -594,13 +566,17 @@
                 </div>
                 <div class="publications">
                     <h4>Publications</h4>
+
+                    <!-- ICC 2026 paper - published preprint -->
                     <div class="publication-item" style="border-left-color: #00ff9d; background: linear-gradient(135deg, rgba(0, 255, 157, 0.08), rgba(0, 255, 255, 0.05));">
                         <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 10px; flex-wrap: wrap;">
-                            <div class="publication-title" style="flex: 1; min-width: 250px;">Towards Optimizing RL Workload Placement at the cloud-edge Continuum in 6G Networks: A Scaled RL Framework</div>
+                            <div class="publication-title" style="flex: 1; min-width: 250px;">Toward Optimizing Reinforcement Learning Workload Placement at the Cloud-Edge Continuum in 6G Networks: A Scaled RL Framework</div>
                             <span style="background: linear-gradient(135deg, #00ff9d, #00ffff); color: #000; padding: 6px 16px; border-radius: 15px; font-size: 0.8em; font-weight: bold; white-space: nowrap; box-shadow: 0 0 15px rgba(0, 255, 157, 0.5); animation: badgePulse 2s ease-in-out infinite;">COMING SOON ⚡</span>
                         </div>
                         <div class="publication-venue">IEEE International Conference on Communications (ICC) 2026 - Accepted</div>
+                        <a href="https://zenodo.org/records/18875434" target="_blank" class="publication-link">View Preprint →</a>
                     </div>
+
                 </div>
                 <div class="publications" style="margin-top: 30px;">
                     <h4 style="color: #00ff9d;">🔮 Future Work</h4>
@@ -635,13 +611,11 @@
                         <div class="publication-venue">IEEE</div>
                         <a href="https://ieeexplore.ieee.org/abstract/document/10876773" target="_blank" class="publication-link">View Publication →</a>
                     </div>
-                    <div class="publication-item" style="border-left-color: #00ff9d; background: linear-gradient(135deg, rgba(0, 255, 157, 0.08), rgba(0, 255, 255, 0.05));">
-                        <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 10px; flex-wrap: wrap;">
-                            <div class="publication-title" style="flex: 1; min-width: 250px;">Towards Energy-Efficient AI: Learning Generic Assignment Skills with Unsupervised Reinforcement Learning for Network Slicing in Distributed 6G Networks</div>
-                            <span style="background: linear-gradient(135deg, #00ff9d, #00ffff); color: #000; padding: 6px 16px; border-radius: 15px; font-size: 0.8em; font-weight: bold; white-space: nowrap; box-shadow: 0 0 15px rgba(0, 255, 157, 0.5); animation: badgePulse 2s ease-in-out infinite;">COMING SOON ⚡</span>
-                        </div>
-                        <div class="publication-venue">IEEE Communications Magazine (ComMag) - Accepted</div>
-                        <a href="https://arxiv.org/abs/2410.23161" target="_blank" class="publication-link">View Preprint →</a>
+                    <!-- "Towards Energy-Efficient AI..." - NOW PUBLISHED, IEEE link -->
+                    <div class="publication-item">
+                        <div class="publication-title">Towards Energy-Efficient AI: Learning Generic Assignment Skills with Unsupervised Reinforcement Learning for Network Slicing in Distributed 6G Networks</div>
+                        <div class="publication-venue">IEEE Communications Magazine (ComMag)</div>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11368660/" target="_blank" class="publication-link">View Publication →</a>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">Energy-Efficient Edge-Domain Automation and Service Provision in 6G Networks by Deploying Offline Discovered Assignment Skills</div>
